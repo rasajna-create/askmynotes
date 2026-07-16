@@ -1,0 +1,136 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+}
+
+/* Hero */
+
+.hero-section{
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b,
+        #334155);
+
+    padding-bottom:130px;
+}
+
+
+/* Glass Cards */
+
+.glass-card{
+
+    background:rgba(255,255,255,0.85);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,0.4);
+
+    border-radius:20px;
+
+    padding:2rem;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+}
+
+
+/* Button */
+
+button{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+
+/* Details */
+
+details summary{
+
+    list-style:none;
+
+}
+
+details summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+details summary::after{
+
+    content:" ▼";
+
+    font-size:.8rem;
+
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#94a3b8;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f1f5f9;
+
+}
+
+
+/* Animation */
+
+.glass-card{
+
+    animation:fadeUp .6s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AskMyNotes: Premium AI-powered PDF analysis with a sleek, grounded interface.">
+
+    <title>AskMyNotes | Intelligent PDF Insights</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-slate-100 font-[Inter] text-slate-800">
+
+    <!-- Hero -->
+    <header class="hero-section py-20 text-center text-white">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <h1 class="text-6xl md:text-7xl font-bold tracking-tight">
+                AskMyNotes
+            </h1>
+
+            <p class="mt-4 text-lg opacity-80">
+                Precision insights from your personal documents.
+            </p>
+
+        </div>
+    </header>
+
+
+    <main class="max-w-4xl mx-auto px-5 -mt-12">
+
+        <!-- Upload Card -->
+        <section class="glass-card mb-8">
+
+            <label
+                for="pdf-input"
+                class="block text-lg font-semibold mb-4">
+
+                Upload Notes
+
+            </label>
+
+            <input
+                type="file"
+                id="pdf-input"
+                accept=".txt,.pdf"
+                class="w-full rounded-lg border border-gray-300 bg-white p-3 transition focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            >
+
+            <p
+                id="upload-status"
+                class="text-sm text-green-600 mt-3 min-h-[1.25rem]">
+            </p>
+
+        </section>
+
+
+        <!-- Question Card -->
+        <section class="glass-card mb-8">
+
+            <label
+                for="question"
+                class="block text-lg font-semibold mb-4">
+
+                Your Question
+
+            </label>
+
+            <textarea
+                id="question"
+                rows="4"
+                placeholder="Ask a question about your uploaded notes."
+                class="w-full rounded-lg border border-gray-300 p-4 resize-none focus:ring-2 focus:ring-indigo-400 focus:outline-none"></textarea>
+
+            <button
+                id="ask-btn"
+                class="mt-6 bg-slate-900 hover:bg-slate-700 transition text-white px-8 py-4 rounded-xl font-medium shadow-lg">
+
+                Read Document
+
+            </button>
+
+            <p
+                id="status"
+                class="text-center mt-4 text-sm text-slate-600 min-h-[1.5rem]">
+            </p>
+
+        </section>
+
+
+
+        <!-- Answer -->
+        <section id="answer-container">
+
+            <div
+                id="answer"
+                hidden
+                class="glass-card">
+
+                <div class="flex justify-between items-center mb-6">
+
+                    <h2 class="text-2xl font-bold">
+                        Analysis
+                    </h2>
+
+                    <div class="flex gap-3">
+
+                        <span
+                            id="qtype-pill"
+                            hidden
+                            class="px-4 py-1 rounded-full bg-green-100 text-green-800 text-sm font-medium">
+                        </span>
+
+                        <span
+                            id="tool-pill"
+                            hidden
+                            class="px-4 py-1 rounded-full bg-slate-900 text-white text-sm font-medium">
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <p
+                    id="answer-text"
+                    class="leading-8 text-gray-700">
+                </p>
+
+                <details
+                    id="sources"
+                    hidden
+                    class="mt-8">
+
+                    <summary class="cursor-pointer font-semibold">
+                        View Citations
+                    </summary>
+
+                    <ul
+                        id="sources-list"
+                        class="list-disc ml-6 mt-4 space-y-2">
+                    </ul>
+
+                </details>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="py-8 text-center text-slate-600">
+
+        Refined by the
+        <strong>AI Engineering Bootcamp</strong>
+        © 2026
+
+    </footer>
+
+    <script src="app.js" defer></script>
+
+</body>
+</html>
